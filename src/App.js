@@ -1,6 +1,12 @@
 import "./App.css";
+let prop = ''
+let _URL = 'https://jaspervdj.be/lorem-markdownum/markdown.txt'
+fetch(_URL)
+.then(response => response.text())
+.then(data => console.log(data))
+.catch((error) => console.log(error.message))
 
-function App() {
+function App(prop) {
   return (
     <div className="App">
       <section class="hero">
